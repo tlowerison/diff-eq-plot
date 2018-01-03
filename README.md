@@ -5,6 +5,7 @@ Download MATLAB scripts and add them to your MATLAB folder.<br/>
 To encode a sequence of coupled differential equations use the following protoype:<br/>
 @(param1, param2, ...) diffEqGen({@(Q,t) ..., @(Q,t) ..., ...})<br/>
 <br/>
+param1, param2, etc. are parameters in the ODEs that are not time-variant and that you may want to vary from plot to plot (for example, masses and spring constants in a mass-spring system)<br/>
 Each coupled differential equation in the cell-table passed into function diffEqGen is used to determine the <i>n<sup>th</sup></i> time derivative of that variable.<br/>
 These functions all receive two arguments:<br/>
 <ol>
