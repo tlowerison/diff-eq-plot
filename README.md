@@ -21,6 +21,7 @@ These functions all receive two arguments:<br/>
 
 Example: Single Mass-Spring-Damper System (assume m, z, k are defined in workspace)<br/>
 <br/>
+<p>
 Q_init = [2, 0];<br/>
 DE = @(m,z,k) diffEqGen({@(Q,t) - z/m\*Q(1,2) - k/m\*Q(1,1)});<br/>
 Ti = 0;<br/>
@@ -29,3 +30,4 @@ Tstep = 0.25;<br/>
 varLabels = ["Position", "Velocity", "Acceleration"];<br/>
 <br/>
 timeEvolvePlot(Q_init, DE(m,z,k), Ti, Tf, Tstep, varLabels);<br/>
+</p>
