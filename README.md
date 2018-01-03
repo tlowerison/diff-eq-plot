@@ -3,7 +3,7 @@
 Download MATLAB scripts and add them to your MATLAB folder.<br/>
 <br/>
 To encode a sequence of coupled differential equations use the following protoype:<br/>
-@(param1, param2, ...) diffEqGen({@(Q,t) ..., @(Q,t) ..., ...})
+@(param1, param2, ...) diffEqGen({@(Q,t) ..., @(Q,t) ..., ...})<br/>
 <br/>
 Each coupled differential equation in the cell-table passed into function diffEqGen is used to determine the <i>n<sup>th</sup></i> time derivative of that variable.<br/>
 These functions all receive two arguments:<br/>
