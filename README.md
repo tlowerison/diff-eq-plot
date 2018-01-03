@@ -22,7 +22,7 @@ These functions all receive two arguments:<br/>
 Example: Single Mass-Spring-Damper System (assume m, z, k are defined in workspace)<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Q_init = [2, 0];<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;DE = @(m,z,k) diffEqGen( { @(Q,t) -z / m \* Q(1,2) - k / m \* Q(1,1) } );<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;DE = @(m, z, k) diffEqGen( { @(Q, t) -z / m \* Q(1,2) - k / m \* Q(1,1) } );<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Ti = 0;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Tf = 60;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Tstep = 0.25;<br/>
@@ -32,7 +32,7 @@ Example: Single Mass-Spring-Damper System (assume m, z, k are defined in workspa
 Example: Two Mass-Spring System with hammerblow to first mass at t=0 (assume m, k are defined in workspace)<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Q_init = [0, 0; 0, 0];<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;DE = @(m,k) diffEqGen( { @(Q,t) k / m \* (Q(2,1) - 2 \*Q(1,1)) + 1 / m \* dirac(t); @(Q,t) k / m \* (Q(1,1) - 2 \* Q(2,1)) } );<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;DE = @(m, k) diffEqGen( { @(Q, t) k / m \* (Q(2,1) - 2 \*Q(1,1)) + 1 / m \* dirac(t); @(Q, t) k / m \* (Q(1,1) - 2 \* Q(2,1)) } );<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Ti = 0;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Tf = 60;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Tstep = 0.25;<br/>
