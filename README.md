@@ -19,7 +19,7 @@ These functions all receive two arguments:<br/>
 
 <hr/>
 
-Example: Single Mass-Spring-Damper System (assume m, z, k are defined in workspace)<br/>
+<b>Example</b>: Single Mass-Spring-Damper System (assume m, z, k are defined in workspace)<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Q_init = [2, 0];<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;DE = @(m, z, k) diffEqGen( { @(Q, t) -z / m \* Q(1,2) - k / m \* Q(1,1) } );<br/>
@@ -29,7 +29,8 @@ Example: Single Mass-Spring-Damper System (assume m, z, k are defined in workspa
 &nbsp;&nbsp;&nbsp;&nbsp;varLabels = ["Position", "Velocity", "Acceleration"];<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;timeEvolvePlot(Q_init, DE(m,z,k), Ti, Tf, Tstep, varLabels);<br/>
 <br/>
-Example: Two Mass-Spring System with hammerblow to first mass at t=0 (assume m, k are defined in workspace)<br/>
+<br/>
+<b>Example</b>: Two Mass-Spring System with hammerblow to first mass at t=0 (assume m, k are defined in workspace)<br/>
 <i>Setting a value in varLabel to 0 will disclude the corresponding variable's derivative from the plot.<br/></i>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Q_init = [0, 0; 0, 0];<br/>
