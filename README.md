@@ -1,7 +1,5 @@
 <h1>Differential Equation Plotter</h1>
 
-Download MATLAB scripts and add them to your MATLAB folder.<br/>
-<br/>
 To encode a sequence of coupled differential equations use the following protoype:<br/>
 @(param1, param2, ...) diffEqGen({@(Q,t) ..., @(Q,t) ..., ...})<br/>
 <br/>
