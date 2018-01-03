@@ -7,8 +7,7 @@ To encode a sequence of coupled differential equations use the following protoyp
 <br/>
 param1, param2, etc. are parameters in the ODEs that are not time-variant and that you may want to vary from plot to plot (e.g. masses and spring constants in a mass-spring system)<br/>
 <br/>
-Each coupled differential equation in the cell-table passed into function diffEqGen is used to determine the <i>n<sup>th</sup></i> time derivative of that variable.<br/>
-These functions all receive two arguments:<br/>
+Each coupled differential equation in the cell-table passed into function diffEqGen is used to determine the <i>n<sup>th</sup></i> time derivative of that variable. These functions all receive two arguments:<br/>
 <ol>
 	<li>
 		<i>Q</i>: A matrix of values for each time-valued variable for the system and its derivatives.<br/>
